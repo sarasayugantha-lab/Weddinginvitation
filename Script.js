@@ -1,3 +1,16 @@
+// ===== Custom Invitee Name =====
+
+// ===== Invitee name from URL =====
+(function setInviteeName(){
+  const params = new URLSearchParams(window.location.search);
+  const guestName = params.get('name');
+  const inviteeEl = document.getElementById('inviteeName');
+
+  if (inviteeEl && guestName){
+    inviteeEl.textContent = 'Dear ' + guestName;
+  }
+})();
+
 // ===== Curtain Intro =====
 const curtainOverlay = document.getElementById('curtainOverlay');
 const openInvitationBtn = document.getElementById('openInvitationBtn');
