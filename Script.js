@@ -175,3 +175,6 @@ function startPetals(){
   // spawn one petal every ~600ms, continuously
   setInterval(spawnPetal, 1300);
 }
+
+// ===== This is a comment im adding to see whether git works or not ====//
+//hiii//
