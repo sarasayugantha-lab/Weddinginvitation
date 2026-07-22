@@ -125,8 +125,8 @@ saveDateBtn.addEventListener('click', () => {
 });
 
 // ===== Apple/Outlook .ics file builder =====
-const eventStart = '20260825T103000';
-const eventEnd   = '20260825T230000';
+const eventStart = '20260825T093000';
+const eventEnd   = '20260825T153000';
 const eventTitle = 'Janitha & Tonisha\'s Wedding';
 const eventLoc   = 'Asliya Golden Cassandra, Katupitiya Road, Dambokka, Kurunegala, Sri Lanka';
 
