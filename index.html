@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Janitha &amp; Tonisha</title>
+
+<!-- Google Fonts: Cinzel Decorative (display), Mea Culpa (script), Montserrat (labels/body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Mea+Culpa&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@600&family=Marcellus&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== Curtain Intro Overlay ===== -->
+<div class="curtain-overlay" id="curtainOverlay">
+  <div class="curtain-topbar" aria-hidden="true"></div>
+
+  <div class="curtain-scrim" aria-hidden="true"></div>
+
+  <div class="curtain-panel curtain-left" aria-hidden="true">
+    <div class="curtain-tassel"></div>
+  </div>
+  <div class="curtain-panel curtain-right" aria-hidden="true">
+    <div class="curtain-tassel"></div>
+  </div>
+
+  <div class="curtain-center-rod" aria-hidden="true"></div>
+
+  <div class="curtain-content" id="curtainContent">
+    <span class="curtain-heart" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/>
+      </svg>
+    </span>
+
+    <span class="curtain-eyebrow">You're Invited</span>
+
+    <h2 class="curtain-names">
+      <span class="curtain-name-line">Janitha</span>
+      <span class="curtain-amp">&amp;</span>
+      <span class="curtain-name-line">Tonisha</span>
+    </h2>
+
+
+
+    <p class="curtain-invite-text">Request the honour of your presence</p>
+
+    <button type="button" class="curtain-btn" id="openInvitationBtn" aria-label="Open invitation">
+      <svg class="curtain-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/>
+        <path d="M20 2v4"/>
+        <path d="M22 4h-4"/>
+        <circle cx="4" cy="20" r="2"/>
+      </svg>
+      <span class="curtain-btn-label">Open Invitation</span>
+    </button>
+
+    <span class="curtain-tap">Tap to begin</span>
+  </div>
+</div><!-- closes .curtain-overlay -->
+
+<audio id="bgMusic" src="/music/wedding-song (1).mp3" loop preload="auto"></audio>
+<button type="button" id="muteBtn" aria-label="Mute music" aria-pressed="false" class="music-toggle-btn">
+  <svg class="icon-unmuted" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path>
+    <path d="M16 9a5 5 0 0 1 0 6"></path>
+    <path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path>
+  </svg>
+  <svg class="icon-muted" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path>
+    <line x1="22" y1="9" x2="16" y2="15"></line>
+    <line x1="16" y1="9" x2="22" y2="15"></line>
+  </svg>
+</button>
+
+<div class="petals-container" id="petalsContainer" aria-hidden="true"></div>
+</button>
+<div id="pageContent">
+<div aria-hidden="true" class="backdrop backdrop-desktop"></div>
+<div aria-hidden="true" class="backdrop backdrop-desktop"></div>
+<div aria-hidden="true" class="backdrop backdrop-desktop"></div>
+<div aria-hidden="true" class="backdrop backdrop-mobile"></div>
+<section class="hero" id="hero">
+  <div class="hero-grid">
+
+    <!-- Text card -->
+    <div class="card">
+      <span class="eyebrow">Together with their families</span>
+
+      <h1 class="names">
+        <span class="line">Janitha</span>
+        <span class="and">and</span>
+        <span class="line">Tonisha</span>
+      </h1>
+     <p class="invitee-name">Sarasa Yugantha</p>
+      <p class="invite-text">
+        Request the honour of your presence at the celebration of our marriage
+      </p>
+
+      <div class="divider" aria-hidden="true">
+        <span class="line-l"></span>
+        <span class="diamond"></span>
+        <span class="line-r"></span>
+      </div>
+
+      <p class="date">Tuesday, August 25, 2026</p>
+    </div>
+
+    <!-- Photo arch -->
+    <div class="photo-wrap">
+      <div class="arch-frame">
+        <div class="arch-inner">
+          <span class="placeholder-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+              <circle cx="9" cy="9" r="2"></circle>
+              <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+            </svg>
+            Your photo
+          </span>
+        </div>
+        <div class="arch-inner-border" aria-hidden="true"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="countdown" class="countdown reveal">
+  <div class="countdown-inner">
+    <div class="countdown-border" aria-hidden="true"></div>
+
+    <!-- Optional: drop your own floral/butterfly png in images/ and uncomment-->
+    <img src="images/countdown-floral.webp" alt="" aria-hidden="true" class="countdown-floral">
+    
+
+    <div class="countdown-content">
+      <div class="countdown-script">We are getting</div>
+      <h2 class="countdown-title">Married</h2>
+
+      <div class="divider" aria-hidden="true">
+        <span class="line-l"></span>
+        <span style="color:#C7A24B;font-size:12px">✦</span>
+        <span class="line-r"></span>
+      </div>
+
+      <div class="countdown-grid reveal">
+        <div class="countdown-box">
+          <span class="countdown-number" id="cd-days">00</span>
+          <span class="countdown-sep"></span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="cd-hours">00</span>
+          <span class="countdown-sep"></span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="cd-mins">00</span>
+          <span class="countdown-sep"></span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="cd-secs">00</span>
+          <span class="countdown-sep"></span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+
+      <p class="countdown-until">Until Tuesday, August 25, 2026</p>
+    </div>
+  </div>
+</section>
+<section id="events" class="events reveal">
+  <div class="events-heading">
+    <span class="eyebrow">Tuesday, August 25, 2026</span>
+    <h2 class="events-title">THE <span class="accent">DETAILS</span></h2>
+    <div class="divider" aria-hidden="true">
+      <span class="line-l"></span>
+      <span style="color:#C7A24B;font-size:12px">✦</span>
+      <span class="line-r"></span>
+    </div>
+  </div>
+
+  <div class="events-grid">
+    <div class="event-card">
+      <span class="event-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="13" r="6.2"></circle>
+          <circle cx="15" cy="13" r="6.2"></circle>
+        </svg>
+      </span>
+      <h3 class="event-name">WEDDING CEREMONY</h3>
+      <div class="event-time">10:30 AM</div>
+      <span class="event-sep"></span>
+      <p class="event-desc">The Kingsbury Hotel<br>Poruwa ceremony in the Grand Ballroom</p>
+    </div>
+
+    <div class="event-card">
+      <span class="event-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+          <path d="M7 2v20"></path>
+          <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+        </svg>
+      </span>
+      <h3 class="event-name">RECEPTION</h3>
+      <div class="event-time">7:00 PM</div>
+      <span class="event-sep"></span>
+      <p class="event-desc">The Kingsbury Hotel<br>Dinner and dancing under the chandeliers</p>
+    </div>
+  </div>
+
+  <div class="save-date-wrap">
+  <div class="save-date-card">
+    <button type="button" class="save-date-btn" id="saveDateBtn">
+      <span class="save-date-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+          <path d="M3 9h18M8 3v4M16 3v4"></path>
+          <path d="M12 18c-2-1.3-3.4-2.6-3.4-4a1.6 1.6 0 0 1 3-.8 1.6 1.6 0 0 1 3 .8c0 1.4-1.4 2.7-3.4 4Z"></path>
+        </svg>
+      </span>
+      <span class="save-date-text">
+        <span class="save-date-title">Save Our Date</span>
+        <span class="save-date-sub">Add the wedding to your calendar</span>
+      </span>
+      <span class="save-date-chevron" id="saveDateChevron">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </span>
+    </button>
+
+    <div class="save-date-panel" id="saveDatePanel">
+  <div class="save-date-panel-inner">
+    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Senara+%26+Ravindu+-+Wedding&dates=20270123T103000%2F20270123T143000&details=Together+with+their+families%2C+Senara+%26+Ravindu+invite+you+to+celebrate+their+wedding.&location=Asliya+Golden+Cassandra%2C+Katupitiya+Road%2C+Dambokka%2C+Kurunegala%2C+Sri+Lanka"
+       target="_blank" rel="noopener noreferrer" class="calendar-item">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google Calendar" class="calendar-icon">
+        <rect x="20" y="20" width="160" height="160" fill="#ffffff"></rect>
+        <rect x="20" y="20" width="160" height="30" fill="#4285F4"></rect>
+        <rect x="20" y="150" width="160" height="30" fill="#34A853"></rect>
+        <rect x="20" y="20" width="30" height="160" fill="#1A73E8"></rect>
+        <rect x="150" y="20" width="30" height="160" fill="#FBBC04"></rect>
+        <polygon points="150,150 180,150 180,180" fill="#EA4335"></polygon>
+        <text x="100" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-weight="500" font-size="78" fill="#4285F4">31</text>
+      </svg>
+      <span class="calendar-item-label">Google Calendar</span>
+      <svg class="calendar-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m9 18 6-6-6-6"></path>
+      </svg>
+    </a>
+
+    <a id="link-ics" href="#" download="senara-and-ravindu-wedding.ics" class="calendar-item calendar-item-bordered">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Apple Calendar" class="calendar-icon">
+        <defs><clipPath id="apple-cal-rounded"><rect x="10" y="10" width="180" height="180" rx="36" ry="36"></rect></clipPath></defs>
+        <g clip-path="url(#apple-cal-rounded)">
+          <rect x="10" y="10" width="180" height="180" fill="#FFFFFF"></rect>
+          <rect x="10" y="10" width="180" height="48" fill="#FF3B30"></rect>
+          <text x="100" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="22" letter-spacing="1" fill="#FFFFFF">JAN</text>
+          <text x="100" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="100" fill="#111111">23</text>
+        </g>
+        <rect x="10" y="10" width="180" height="180" rx="36" ry="36" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="2"></rect>
+      </svg>
+      <span class="calendar-item-label">Apple Calendar / Outlook</span>
+      <svg class="calendar-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m9 18 6-6-6-6"></path>
+      </svg>
+    </a>
+  </div>
+</div>
+</div>
+</section>
+<section id="venue" class="venue reveal">
+  <div class="events-heading">
+    <span class="eyebrow">How to find us</span>
+    <h2 class="events-title">THE <span class="accent">LOCATION</span></h2>
+    <div class="divider" aria-hidden="true">
+      <span class="line-l"></span>
+      <span style="color:#C7A24B;font-size:12px">✦</span>
+      <span class="line-r"></span>
+    </div>
+  </div>
+
+  <div class="venue-layout">
+    <div class="venue-card-wrap">
+      <div class="venue-card">
+        <span class="venue-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </span>
+        <div class="venue-info">
+          <span class="venue-script">Venue</span>
+          <h3 class="venue-name">Asliya Golden Cassandra</h3>
+          <p class="venue-address"> Katupitiya Road, Dambokka, Kurunegala, Sri Lanka</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="venue-map-wrap">
+      <div class="venue-map">
+        <iframe
+         title="Map of Asliya Golden Cassandra"
+          src="https://maps.google.com/maps?q=Asliya%20Golden%20Cassandra%2C%20Katupitiya%20Road%2C%20Dambokka%2C%20Kurunegala%2C%20Sri%20Lanka&z=15&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe> 
+      </div>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=Asliya%20Golden%20Cassandra%2C%20Katupitiya%20Road%2C%20Dambokka%2C%20Kurunegala%2C%20Sri%20Lanka"
+        target="_blank" rel="noopener noreferrer" class="maps-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        Open in Maps
+      </a>
+    </div>
+  </div>
+</section>
+<section id="footer" class="footer reveal">
+  <div class="footer-card">
+    <div class="footer-border" aria-hidden="true"></div>
+
+    
+    <img src="images/footer-floral.webp" alt="" aria-hidden="true" class="footer-floral">
+    
+
+    <div class="footer-content">
+      <div class="footer-label">Save the date</div>
+      <div class="footer-date">25 . 08 . 26</div>
+      <div class="footer-script">Sealed with love.</div>
+
+      <div class="footer-monogram">J<span class="amp">&amp;</span>T</div>
+      <div class="footer-names">Janitha &amp; Tonisha</div>
+
+      <div class="footer-buttons">
+        <a href="tel:+94711252843" aria-label="Call Bride" class="footer-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+          </svg>
+          Call Groom
+        </a>
+        <a href="tel:+94770166065" aria-label="Call Groom" class="footer-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+          </svg>
+          Call Bride
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="credit-bar">
+  <p class="credit-text"><span class="credit-names">Janitha &amp; Tonisha</span></p>
+</div>
+</div><!-- /#pageContent -->
+<script src="script.js"></script>   
+</body>
+</html>
