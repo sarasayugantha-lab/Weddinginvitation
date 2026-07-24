@@ -978,6 +978,14 @@ body{
   color: rgba(246,239,221,0.85);
 }
 
+.credit-designer{
+  margin: 0.375rem 0 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  color: rgba(246,239,221,0.5);
+}
+
 /* ==========================================================
    SCROLL REVEAL
    ========================================================== */
